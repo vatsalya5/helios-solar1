@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helios Solar | Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #0E0E0E;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFFFF; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B99A45; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E19600; 
+        }
+
+        .services-hero-bg {
+             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(185, 154, 69, 0.2)), url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2064&auto=format&fit=crop');
+             background-size: cover;
+             background-position: center;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Button Gradient */
+        .btn-gold {
+            background: linear-gradient(to right, #B99A45, #E19600);
+            color: #FFFFFF;
+        }
+        .btn-gold:hover {
+            background: linear-gradient(to right, #cbb063, #ffaa00);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#B99A45] selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group cursor-pointer">
+                    <div class="w-10 h-10 btn-gold rounded-lg flex items-center justify-center text-white shadow-lg shadow-[#E19600]/20 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-solar-panel text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-[#0E0E0E] tracking-tight">Helios<span class="text-[#E19600]">Solar</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+                    <a href="index.html" class="hover:text-[#E19600] transition-colors">Home</a>
+                    <a href="ipp.html" class="hover:text-[#E19600] transition-colors">IPP</a>
+                    <a href="bess.html" class="hover:text-[#E19600] transition-colors">BESS</a>
+                    <a href="consultancy.html" class="hover:text-[#E19600] transition-colors">Consultancy</a>
+                    <a href="#" class="text-[#E19600] font-bold">Services</a>
+                    <a href="#contact-services" class="px-6 py-2.5 btn-gold rounded-full hover:shadow-lg hover:shadow-[#E19600]/30 hover:-translate-y-0.5 transition-all text-sm font-bold">
+                        Partner With Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#0E0E0E] focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="flex flex-col p-6 gap-4 font-medium">
+                <a href="index.html" class="text-left text-gray-600 hover:text-[#E19600]">Home</a>
+                <a href="ipp.html" class="text-left text-gray-600 hover:text-[#E19600]">IPP Knowledge Hub</a>
+                <a href="bess.html" class="text-left text-gray-600 hover:text-[#E19600]">BESS</a>
+                <a href="consultancy.html" class="text-left text-gray-600 hover:text-[#E19600]">Consultancy</a>
+                <a href="#" class="text-left text-[#E19600]">All Services</a>
+                <a href="#contact-services" class="btn-gold px-4 py-3 rounded-lg text-center font-bold">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero Header -->
+    <section class="services-hero-bg min-h-[60vh] flex items-center relative pt-20 pb-32">
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#FFFFFF] to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center reveal active">
+            <span class="bg-white/50 backdrop-blur-md border border-[#B99A45]/50 text-[#B99A45] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide mb-4 inline-block shadow-sm">
+                What We Do
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#0E0E0E] mb-6 drop-shadow-sm leading-tight">
+                Comprehensive <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#B99A45] to-[#E19600]">Energy Solutions</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
+                From large-scale generation to advanced storage and strategic advisory, we power the future of energy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Pillars -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- Service 1: Solar IPP -->
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-32 reveal">
+                <div class="w-full md:w-1/2 h-[400px] rounded-2xl overflow-hidden shadow-xl relative group">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop" alt="Solar Farm" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E19600]/10 flex items-center justify-center text-[#E19600] text-2xl">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-[#0E0E0E]">Solar IPP</h2>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        As an Independent Power Producer, we finance, build, own, and operate utility-scale solar power plants. We handle the entire lifecycle from land acquisition to grid synchronization, ensuring reliable green energy generation.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Turnkey Project Execution
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Long-term PPA Structures
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Asset Management
+                        </li>
+                    </ul>
+                    <a href="ipp.html" class="inline-flex items-center gap-2 text-[#E19600] font-bold hover:gap-4 transition-all">
+                        Explore IPP Services <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 2: BESS -->
+            <div class="flex flex-col md:flex-row-reverse gap-12 items-center mb-32 reveal">
+                <div class="w-full md:w-1/2 h-[400px] rounded-2xl overflow-hidden shadow-xl relative group">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <!-- NEW IMAGE URL -->
+                    <img src="https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?q=80&w=2070&auto=format&fit=crop" alt="Battery Energy Storage System" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E19600]/10 flex items-center justify-center text-[#E19600] text-2xl">
+                            <i class="fa-solid fa-battery-full"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-[#0E0E0E]">Battery Energy Storage</h2>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Advanced BESS solutions to stabilize the grid and maximize renewable energy utilization. We provide peak shaving, frequency regulation, and backup power systems for utility and C&I clients.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Grid Stabilization
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Energy Arbitrage
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Microgrid Integration
+                        </li>
+                    </ul>
+                    <a href="bess.html" class="inline-flex items-center gap-2 text-[#E19600] font-bold hover:gap-4 transition-all">
+                        View BESS Solutions <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 3: Consultancy -->
+            <div class="flex flex-col md:flex-row gap-12 items-center reveal">
+                <div class="w-full md:w-1/2 h-[400px] rounded-2xl overflow-hidden shadow-xl relative group">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Consultancy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E19600]/10 flex items-center justify-center text-[#E19600] text-2xl">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-[#0E0E0E]">Strategic Consultancy</h2>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Expert advisory services for investors, landowners, and developers. We guide you through the technical, financial, and regulatory complexities of the renewable energy market to ensure project success.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Feasibility Studies
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Financial Modelling
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600">
+                            <i class="fa-solid fa-check text-[#B99A45]"></i> Regulatory Compliance
+                        </li>
+                    </ul>
+                    <a href="consultancy.html" class="inline-flex items-center gap-2 text-[#E19600] font-bold hover:gap-4 transition-all">
+                        See Consultancy Services <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA / Footer Area -->
+    <section id="contact-services" class="py-24 bg-white text-[#0E0E0E] relative overflow-hidden border-t border-gray-100">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#E19600]/10 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center mb-20">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Let's Build the Future Together</h2>
+            <p class="text-gray-600 text-xl mb-10">Contact Helios Solar for a comprehensive energy proposal.</p>
+            <button class="px-10 py-4 btn-gold rounded-full font-bold text-lg hover:scale-105 transition-all shadow-lg shadow-[#E19600]/20">
+                Contact Us
+            </button>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container mx-auto px-6 pt-16 border-t border-gray-100">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                         <div class="w-8 h-8 btn-gold rounded flex items-center justify-center text-white">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+                        <span class="text-xl font-bold text-[#0E0E0E]">Helios<span class="text-[#E19600]">Solar</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm">
+                        info@heliossolar.com<br>
+                        079-40191727
+                    </p>
+                </div>
+
+                <!-- Visit -->
+                <div>
+                    <h4 class="text-[#0E0E0E] font-bold mb-4">Visit</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="index.html" class="hover:text-[#E19600]">Home</a></li>
+                        <li><a href="ipp.html" class="hover:text-[#E19600]">IPP Services</a></li>
+                        <li><a href="bess.html" class="hover:text-[#E19600]">BESS</a></li>
+                        <li><a href="consultancy.html" class="hover:text-[#E19600]">Consultancy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-[#0E0E0E] font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-[#E19600]">Projects</a></li>
+                        <li><a href="#" class="hover:text-[#E19600]">Investor Resource</a></li>
+                        <li><a href="#" class="hover:text-[#E19600]">IPO Offer Documents</a></li>
+                        <li><a href="#" class="hover:text-[#E19600]">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Offices -->
+                <div>
+                    <h4 class="text-[#0E0E0E] font-bold mb-4">Registered Office</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                        West Wing, 1209-1212, STRATUM @ Venus Grounds, Near Jhasi Ki Rani Statue, Nehru Nagar, Ahmedabad - 380015, India
+                    </p>
+                     <h4 class="text-[#0E0E0E] font-bold mb-4">Subscribe</h4>
+                     <div class="flex">
+                         <input type="email" placeholder="Enter your email" class="bg-gray-100 text-[#0E0E0E] text-sm px-4 py-2 rounded-l-md focus:outline-none w-full border border-gray-200">
+                         <button class="bg-[#E19600] px-4 py-2 rounded-r-md text-white hover:bg-[#cbb063]"><i class="fa-solid fa-arrow-right"></i></button>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 text-center text-gray-500 text-xs border-t border-gray-100">
+                &copy; 2024 Helios Solar Inc. All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Mobile Menu Logic ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        if(btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')){
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+
+        // --- Navbar Scroll Effect ---
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once on load
+        revealOnScroll();
+    </script>
+</body>
+</html>

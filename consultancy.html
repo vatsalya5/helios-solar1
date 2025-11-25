@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helios Solar | Strategic Advisory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #0E0E0E;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #FFFFFF; }
+        ::-webkit-scrollbar-thumb { background: #B99A45; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E19600; }
+
+        .consult-hero-bg {
+             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(185, 154, 69, 0.1)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop');
+             background-size: cover;
+             background-position: center;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(to right, #B99A45, #E19600);
+            color: #FFFFFF;
+        }
+        .btn-gold:hover {
+            background: linear-gradient(to right, #cbb063, #ffaa00);
+        }
+        
+        /* Service Card Hover */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#B99A45] selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 group cursor-pointer">
+                    <div class="w-10 h-10 btn-gold rounded-lg flex items-center justify-center text-white shadow-lg shadow-[#E19600]/20 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-solar-panel text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-[#0E0E0E] tracking-tight">Helios<span class="text-[#E19600]">Solar</span></span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+                    <a href="index.html" class="hover:text-[#E19600] transition-colors">Home</a>
+                    <a href="index.html#ipp" class="hover:text-[#E19600] transition-colors">IPP</a>
+                    <a href="#" class="text-[#E19600] font-bold">Advisory</a>
+                    <a href="index.html#projects" class="hover:text-[#E19600] transition-colors">Portfolio</a>
+                    <a href="index.html#contact" class="px-6 py-2.5 btn-gold rounded-full hover:shadow-lg hover:shadow-[#E19600]/30 hover:-translate-y-0.5 transition-all text-sm font-bold">
+                        Consult With Us
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#0E0E0E] focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="flex flex-col p-6 gap-4 font-medium">
+                <a href="index.html" class="text-left text-gray-600 hover:text-[#E19600]">Home</a>
+                <a href="index.html#ipp" class="text-left text-gray-600 hover:text-[#E19600]">IPP</a>
+                <a href="#" class="text-left text-[#E19600]">Advisory</a>
+                <a href="index.html#contact" class="btn-gold px-4 py-3 rounded-lg text-center font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="consult-hero-bg min-h-[90vh] flex items-center relative pt-20 pb-20">
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#FFFFFF] to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center reveal active">
+            <span class="bg-white/70 backdrop-blur-sm border border-[#B99A45]/50 text-[#B99A45] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide mb-4 inline-block shadow-sm">
+                Investment & Infrastructure Advisory
+            </span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-[#0E0E0E] mb-6 drop-shadow-md leading-tight">
+                Strategic Renewable <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#B99A45] to-[#E19600]">Energy Advisory</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-medium leading-relaxed mb-10">
+                Delivering techno-commercial due diligence and capital structuring for utility-scale solar assets. We bridge the gap between capital deployment and operational reality.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#services" class="px-8 py-3 btn-gold rounded-full font-bold shadow-lg shadow-[#E19600]/30 hover:scale-105 transition-transform">Our Capabilities</a>
+                <a href="#process" class="px-8 py-3 bg-white text-[#0E0E0E] border border-gray-200 rounded-full font-bold hover:bg-gray-50 transition-colors">Engagement Model</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto bg-gray-50 rounded-3xl shadow-2xl shadow-gray-200 -mt-32 relative z-20 border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-2 h-full">
+                    <div class="p-10 md:p-16 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#0E0E0E] mb-6">Mitigating Risk in Solar Assets</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                            The renewable energy sector presents distinct challenges in regulatory compliance, land acquisition, and financial modeling. Unforeseen technical or policy shifts can significantly erode project IRR.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed text-lg border-l-4 border-[#E19600] pl-6">
+                            Helios Solar provides institutional-grade Strategic Advisory. We execute rigorous technical audits, market intelligence reporting, and debt syndication to transform land banks into high-yield, grid-connected infrastructure.
+                        </p>
+                    </div>
+                    
+                    <div class="relative h-64 md:h-auto min-h-[400px] w-full bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" 
+                             alt="Executive Strategy Meeting" 
+                             class="absolute inset-0 w-full h-full object-cover object-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0E0E0E]">Advisory Competencies</h2>
+                <p class="text-[#B99A45] mt-2 font-medium">End-to-end solutions for Greenfield and Brownfield developments.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+                <div class="service-card bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100 flex items-start gap-6 shadow-lg group">
+                    <div class="w-14 h-14 rounded-full bg-white border border-[#B99A45]/20 flex items-center justify-center text-[#E19600] text-2xl flex-shrink-0 group-hover:bg-[#E19600] group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#0E0E0E] mb-2">Capital Structuring</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We facilitate Non-Recourse Financing and Equity Syndication. Our team develops bankable financial models (DSCR, LCOE sensitivity analysis) to secure competitive funding from DFIs and national lenders.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100 flex items-start gap-6 shadow-lg group">
+                    <div class="w-14 h-14 rounded-full bg-white border border-[#B99A45]/20 flex items-center justify-center text-[#E19600] text-2xl flex-shrink-0 group-hover:bg-[#E19600] group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#0E0E0E] mb-2">Regulatory Compliance</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Expert navigation of CERC/SERC regulations, including Open Access policies, CEIG approvals, Land Use Conversion (NA), and connectivity agreements with CTU (ISTS) or STU networks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100 flex items-start gap-6 shadow-lg group">
+                    <div class="w-14 h-14 rounded-full bg-white border border-[#B99A45]/20 flex items-center justify-center text-[#E19600] text-2xl flex-shrink-0 group-hover:bg-[#E19600] group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-handshake-simple"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#0E0E0E] mb-2">PPA Negotiation</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Structuring robust Power Purchase Agreements (PPA) for Group Captive or Third-Party Sale models. We ensure terms protect long-term revenue stability against tariff volatility.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100 flex items-start gap-6 shadow-lg group">
+                    <div class="w-14 h-14 rounded-full bg-white border border-[#B99A45]/20 flex items-center justify-center text-[#E19600] text-2xl flex-shrink-0 group-hover:bg-[#E19600] group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#0E0E0E] mb-2">Techno-Commercial Audit</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Independent validation of engineering designs, PVSyst yield reports, and technology selection (BOM) to minimize technical risk and optimize CAPEX efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#FAFAFA] border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-[#E19600] font-bold uppercase tracking-wider text-sm mb-2 block">Market Intelligence</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#0E0E0E] mb-6">Policy Optimization</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        The renewable policy framework is dynamic. We leverage regulatory foresight to optimize project structures, ensuring compliance and maximizing fiscal incentives.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-double text-[#E19600] mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-[#0E0E0E]">ISTS Waiver Strategy</h4>
+                                <p class="text-sm text-gray-500">Strategic project siting and sizing to qualify for Inter-State Transmission System charge waivers.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-double text-[#E19600] mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-[#0E0E0E]">ALMM Protocols</h4>
+                                <p class="text-sm text-gray-500">Ensuring procurement strictly adheres to the Approved List of Models and Manufacturers (ALMM) to prevent commissioning delays.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-double text-[#E19600] mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-[#0E0E0E]">Group Captive Equity</h4>
+                                <p class="text-sm text-gray-500">Structuring precise 26% equity holding patterns to legally waive Cross-Subsidy Surcharges (CSS).</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal relative h-[400px]">
+                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Regulatory Documents" class="w-full h-full object-cover rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0E0E0E]">Engagement Framework</h2>
+                <p class="text-[#B99A45] mt-2 font-medium">A systematic approach to project realization.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="relative p-8 bg-white border-b-4 border-[#B99A45]/20 rounded-xl shadow-lg hover:border-[#E19600] hover:shadow-xl transition-all group reveal delay-100">
+                    <div class="text-6xl font-extrabold absolute top-2 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">01</div>
+                    <h3 class="text-xl font-bold mb-3 relative z-10 text-[#0E0E0E]">Viability Assessment</h3>
+                    <p class="text-sm text-gray-600 relative z-10 leading-relaxed">Site due diligence, solar resource assessment, and preliminary grid evacuation analysis.</p>
+                </div>
+
+                <div class="relative p-8 bg-white border-b-4 border-[#B99A45]/20 rounded-xl shadow-lg hover:border-[#E19600] hover:shadow-xl transition-all group reveal delay-200">
+                    <div class="text-6xl font-extrabold absolute top-2 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">02</div>
+                    <h3 class="text-xl font-bold mb-3 relative z-10 text-[#0E0E0E]">Asset Structuring</h3>
+                    <p class="text-sm text-gray-600 relative z-10 leading-relaxed">SPV incorporation, detailed financial modeling, and Information Memorandum (IM) preparation.</p>
+                </div>
+
+                <div class="relative p-8 bg-white border-b-4 border-[#B99A45]/20 rounded-xl shadow-lg hover:border-[#E19600] hover:shadow-xl transition-all group reveal delay-300">
+                    <div class="text-6xl font-extrabold absolute top-2 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">03</div>
+                    <h3 class="text-xl font-bold mb-3 relative z-10 text-[#0E0E0E]">Project Development</h3>
+                    <p class="text-sm text-gray-600 relative z-10 leading-relaxed">Securing statutory clearances, land acquisition execution, and PPA ratification.</p>
+                </div>
+
+                <div class="relative p-8 bg-white border-b-4 border-[#B99A45]/20 rounded-xl shadow-lg hover:border-[#E19600] hover:shadow-xl transition-all group reveal delay-400">
+                    <div class="text-6xl font-extrabold absolute top-2 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">04</div>
+                    <h3 class="text-xl font-bold mb-3 relative z-10 text-[#0E0E0E]">Financial Close</h3>
+                    <p class="text-sm text-gray-600 relative z-10 leading-relaxed">Finalizing capital injection and transition to EPC for deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#FAFAFA] border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0E0E0E]">Track Record</h2>
+                <p class="text-[#B99A45] mt-2 font-medium">Proven results in complex deployments.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="text-[#E19600] font-bold text-lg mb-2">25 MW Open Access</div>
+                    <h4 class="font-bold text-[#0E0E0E] mb-2">Textile Major, Gujarat</h4>
+                    <p class="text-sm text-gray-600">Executed a Group Captive structure delivering ₹2.5 Cr annual OPEX savings. Achieved financial close within 120 days.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="text-[#E19600] font-bold text-lg mb-2">10 MW Solar Park</div>
+                    <h4 class="font-bold text-[#0E0E0E] mb-2">Real Estate Fund, Rajasthan</h4>
+                    <p class="text-sm text-gray-600">Managed end-to-end land aggregation and statutory approvals (CEIG/STU) for a greenfield development.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="text-[#E19600] font-bold text-lg mb-2">Debt Syndication</div>
+                    <h4 class="font-bold text-[#0E0E0E] mb-2">IPP Developer</h4>
+                    <p class="text-sm text-gray-600">Successfully arranged ₹150 Cr in project financing from a banking consortium at sub-market rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white text-[#0E0E0E] relative overflow-hidden border-t border-gray-100">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#E19600]/10 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center mb-20">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Initiate Your Project</h2>
+            <p class="text-gray-600 text-xl mb-10">Schedule a confidential consultation with our principal advisors.</p>
+            <a href="index.html#contact" class="px-10 py-4 btn-gold rounded-full font-bold text-lg hover:scale-105 transition-all shadow-lg shadow-[#E19600]/20">
+                Request Meeting
+            </a>
+        </div>
+
+        <div class="container mx-auto px-6 pt-16 border-t border-gray-100">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                         <div class="w-8 h-8 btn-gold rounded flex items-center justify-center text-white">
+                             <i class="fa-solid fa-solar-panel"></i>
+                         </div>
+                        <span class="text-xl font-bold text-[#0E0E0E]">Helios<span class="text-[#E19600]">Solar</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm">
+                        info@heliossolar.com<br>
+                        +91 98765 43210
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#0E0E0E] font-bold mb-4">Visit</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="index.html" class="hover:text-[#E19600]">Home</a></li>
+                        <li><a href="index.html#ipp" class="hover:text-[#E19600]">IPP Services</a></li>
+                        <li><a href="index.html#projects" class="hover:text-[#E19600]">Portfolio</a></li>
+                        <li><a href="index.html#contact" class="hover:text-[#E19600]">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[#0E0E0E] font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-[#E19600]">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-[#E19600]">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-[#E19600]">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-[#E19600]">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[#0E0E0E] font-bold mb-4">Registered Office</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                        101, Solar Park Complex,<br>
+                        SG Highway, Ahmedabad - 380054, India
+                    </p>
+                      <h4 class="text-[#0E0E0E] font-bold mb-4">Subscribe</h4>
+                      <div class="flex">
+                          <input type="email" placeholder="Enter your email" class="bg-gray-100 text-[#0E0E0E] text-sm px-4 py-2 rounded-l-md focus:outline-none w-full border border-gray-200">
+                          <button class="bg-[#E19600] px-4 py-2 rounded-r-md text-white hover:bg-[#cbb063]"><i class="fa-solid fa-arrow-right"></i></button>
+                      </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 text-center text-gray-500 text-xs border-t border-gray-100">
+                &copy; 2024 Helios Solar Inc. All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        if(btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')){
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+
+        // Close mobile menu when a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // --- Navbar Scroll Effect ---
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>
